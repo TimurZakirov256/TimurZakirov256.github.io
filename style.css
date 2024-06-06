@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 65px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 16px;
+    font-weight: normal;
+    color: #0A3622;
+}
+
+.nav-link {
+    color: #4CAF50;
+}
+
+.nav-link.active {
+    color: #0A3622;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+.detail-image {
+    object-fit: cover;
+    width: 652px;
+    height: 738px;
+}
+
+.detail-content {
+    margin-top: 15%;
+    padding-left: 10%;
+}
+
+footer {
+    background-color: #479F76;
+    text-align: center;
+    padding: 5px 0;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    color: black;
+}

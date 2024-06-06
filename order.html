@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Haven - Заказ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg"> <!-- Навигационная панель --> 
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jfif" alt="Pet Haven Logo" class="logo">
+                <span class="site-title">Pet Haven</span>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="order.html">Заказ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="list.html">Список</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5"> <!-- Форма заказа -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Оформить заказ</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="first-name" class="form-label">Имя:</label>
+                        <input type="text" class="form-control" id="first-name" name="first-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="last-name" class="form-label">Фамилия:</label>
+                        <input type="text" class="form-control" id="last-name" name="last-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pet-type" class="form-label">Животное:</label>
+                        <input type="text" class="form-control" id="pet-type" name="pet-type">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Адрес:</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer> <!-- Футер -->
+        <p>&copy; 2024 Pet Haven. Все права защищены.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
