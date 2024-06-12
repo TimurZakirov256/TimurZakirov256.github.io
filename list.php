@@ -61,23 +61,7 @@ $items = get_items();
         <p>&copy; 2024 Pet Haven. Все права защищены.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function filterCards() {
-            const searchText = document.getElementById('searchInput').value.toLowerCase();
-            const cardContainers = document.querySelectorAll('.card-container');
-
-            cardContainers.forEach(container => {
-                const cardTitle = container.querySelector('.card-title').textContent.toLowerCase();
-                const cardDescription = container.querySelector('.card-text').textContent.toLowerCase();
-
-                if (cardTitle.includes(searchText) || cardDescription.includes(searchText)) {
-                    container.style.display = 'block';
-                } else {
-                    container.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

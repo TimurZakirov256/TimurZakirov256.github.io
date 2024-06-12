@@ -1,4 +1,5 @@
 // order.js
+
 document.getElementById('orderForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -38,10 +39,20 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
         address: document.getElementById('address').value.trim(),
     };
 
-    console.log('Form Data:', formData);
-
-    showModal('Форма успешно отправлена!', true);
-    this.reset();
+    $.ajax({
+        type: 'POST',
+        url: 'process_order.php', 
+        data: formData,
+        success: function(response) {
+            showModal(response, true);
+            document.getElementById('orderForm').reset();
+        },
+        error: function(xhr, status, error) {
+            console.error('Error:', error);
+            showModal('An error occurred while processing your order.', false);
+        }
+    });
+    
 });
 
 function showModal(message, isSuccess) {

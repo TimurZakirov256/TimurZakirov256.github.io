@@ -31,4 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="animal">Favorite Animal:</label><br>
         <input type="text" id="animal" name="animal" required><br><br>
         <label for="address">Address:</label><br>
-        <textarea id="address"
+        <textarea id="address" name="address" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

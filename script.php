@@ -1,7 +1,7 @@
 <?php
 function connect_db() {
-    $host = 'MySQL-5.7';
-    $db = 'website_db';
+    $host = 'MySQL-8.2';
+    $db = 'lab_db';
     $user = 'root';
     $pass = ''; 
 
@@ -19,5 +19,16 @@ function get_items() {
     $pdo = connect_db();
     $stmt = $pdo->query('SELECT * FROM items');
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function save_feedback($first_name, $last_name, $email, $animal, $address, $pdo) {
+    try {
+        $stmt = $pdo->prepare("INSERT INTO feedback (first_name, last_name, email, animal, address) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$first_name, $last_name, $email, $animal, $address]);
+        return true;
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        return false;
+    }
 }
 ?>
